@@ -1,0 +1,167 @@
+/* MobilityStatsPage.css */
+
+.mobility-stats-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .stats-header h1 {
+    font-size: 2rem;
+    color: #343a40;
+  }
+  
+  .period-selector button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .period-selector button.active {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .period-selector button:hover:not(.active) {
+    background-color: #ced4da;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .stats-card {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stats-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #495057;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+  
+  .stat-comparison {
+    font-size: 0.9rem;
+    color: #28a745;
+  }
+  
+  .stat-comparison i {
+    margin-right: 5px;
+  }
+  
+  .stats-card.wide {
+    grid-column: span 2;
+  }
+  
+  .mode-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mode-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mode-label {
+    width: 80px;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+  
+  .progress-bar {
+    flex-grow: 1;
+    background-color: #e9ecef;
+    height: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    background-color: #007bff;
+    height: 100%;
+  }
+  
+  .percentage {
+    font-size: 0.9rem;
+    color: #343a40;
+  }
+  
+  .peak-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .peak-hours span {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .trends-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 200px;
+    border-left: 2px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+    padding: 10px;
+  }
+  
+  .trend-bar {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .trend-bar .bar {
+    background-color: #28a745;
+    width: 30px;
+    margin: 0 auto;
+    transition: height 0.3s;
+  }
+  
+  .trend-bar .month {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+  
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .stats-card.wide {
+      grid-column: span 1;
+    }
+  }
+  

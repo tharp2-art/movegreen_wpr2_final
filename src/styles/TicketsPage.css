@@ -1,0 +1,313 @@
+/* src/styles/TicketsPage.css */
+.tickets-page {
+  padding: var(--spacing-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  border-radius: var(--border-radius-lg);
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Tabs */
+.tabs-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--spacing-sm);
+}
+
+.tab {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  background: none;
+  font-size: 1.1em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+}
+
+.tab.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Provider Cards */
+.provider-section {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.provider-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.provider-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.provider-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Combi-Abos */
+.combi-abos h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.abo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.abo-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.abo-card.premium {
+  border: 2px solid var(--primary-color);
+}
+
+.abo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.savings-badge {
+  background-color: var(--success-color);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.price {
+  margin-bottom: var(--spacing-lg);
+}
+
+.amount {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.duration {
+  color: var(--text-secondary);
+  font-size: 1.1em;
+}
+
+.included-services,
+.features {
+  margin-bottom: var(--spacing-lg);
+}
+
+.included-services h4,
+.features h4 {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.included-services ul,
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.included-services li,
+.features li {
+  padding: var(--spacing-xs) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.included-services li::before,
+.features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+}
+
+/* Tickets and Subscriptions */
+.tickets-grid,
+.subscriptions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.ticket-card,
+.subscription-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.ticket-card h4,
+.subscription-card h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-lg) 0;
+}
+
+.features-list li {
+  padding: var(--spacing-xs) 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.features-list li::before {
+  content: '•';
+  color: var(--primary-color);
+}
+
+.buy-button,
+.subscribe-button {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+}
+
+.buy-button:hover,
+.subscribe-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Single Tickets and Rides */
+.single-tickets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.section-group {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-group h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  font-size: 1.5em;
+}
+
+.single-ticket-card {
+  background: var(--background-white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.single-ticket-card h4 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.zones,
+.class,
+.valid-time,
+.additional {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+.price-breakdown {
+  background: var(--background-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.price-breakdown div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    flex: 1 1 calc(50% - var(--spacing-sm));
+    text-align: center;
+  }
+  
+  .abo-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .provider-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}

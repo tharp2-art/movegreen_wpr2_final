@@ -1,0 +1,68 @@
+.map-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 1rem 0.5rem;
+  border-radius: 12px 0 0 12px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 1000;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.sidebar-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.sidebar-icon:hover {
+  background-color: #e8f5e9;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-icon.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.tooltip {
+  position: absolute;
+  left: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar-icon:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

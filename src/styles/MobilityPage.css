@@ -1,0 +1,274 @@
+.mobility-page {
+  padding: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mobility-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.mobility-hero h1 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.mobility-hero p {
+  color: var(--text-secondary);
+  font-size: 1.2em;
+}
+
+/* Verkehrsmeldungen */
+.traffic-incidents {
+  margin-bottom: var(--spacing-xl);
+}
+
+.traffic-incidents h2,
+.transport-news h2,
+.service-disruptions h2,
+.mobility-tips h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.incidents-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.incident-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  background-color: var(--background-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary-color);
+}
+
+.incident-card.severity-hoch {
+  border-left-color: var(--danger-color);
+}
+
+.incident-card.severity-mittel {
+  border-left-color: var(--warning-color);
+}
+
+.incident-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.incident-icon i {
+  color: var(--primary-color);
+  font-size: 1.2em;
+}
+
+.incident-content h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.location {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.impact {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.time {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.status-badge {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+/* Verkehrsnachrichten */
+.transport-news {
+  margin-bottom: var(--spacing-xl);
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.news-card {
+  background-color: var(--background-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.news-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.news-icon i {
+  color: var(--primary-color);
+  font-size: 1.5em;
+}
+
+.news-content {
+  flex-grow: 1;
+}
+
+.news-category {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.news-content h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.news-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.news-date {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+/* Betriebsstörungen */
+.service-disruptions {
+  margin-bottom: var(--spacing-xl);
+}
+
+.disruptions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.disruption-card {
+  background-color: var(--background-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.disruption-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.disruption-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--warning-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disruption-icon i {
+  color: var(--warning-color);
+  font-size: 1.2em;
+}
+
+.disruption-header h3 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.disruption-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.disruption-content .route {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.disruption-content .resolution {
+  margin-top: var(--spacing-sm);
+  font-style: italic;
+}
+
+/* Mobilitäts-Tipps */
+.mobility-tips {
+  margin-bottom: var(--spacing-xl);
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.tip-card {
+  background-color: var(--background-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.tip-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+}
+
+.tip-icon i {
+  color: var(--primary-color);
+  font-size: 1.8em;
+}
+
+.tip-card h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tip-card p {
+  color: var(--text-secondary);
+}

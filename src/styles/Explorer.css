@@ -1,0 +1,206 @@
+.explorer-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.explorer-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.explorer-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.explorer-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.explorer-controls input,
+.explorer-controls select {
+  padding: 12px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.explorer-controls input:focus,
+.explorer-controls select:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.explorer-sections {
+  padding: 20px 0;
+}
+
+.explorer-sections h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.places-grid,
+.activities-grid,
+.groups-grid,
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.place-card,
+.event-card,
+.group-card,
+.wishlist-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.place-card:hover,
+.event-card:hover,
+.group-card:hover,
+.wishlist-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.place-image,
+.event-image,
+.group-image,
+.wishlist-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.place-image img,
+.event-image img,
+.group-image img,
+.wishlist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.place-card:hover img,
+.event-card:hover img,
+.group-card:hover img,
+.wishlist-card:hover img {
+  transform: scale(1.1);
+}
+
+.place-info,
+.event-info,
+.group-info,
+.wishlist-info {
+  padding: 20px;
+}
+
+.place-info h3,
+.event-info h3,
+.group-info h3,
+.wishlist-info h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.button-primary,
+.button-secondary,
+.button-danger {
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button-secondary {
+  background-color: #2196F3;
+  color: white;
+}
+
+.button-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.button-secondary:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+.button-danger:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .explorer-header h1 {
+    font-size: 2rem;
+  }
+  
+  .explorer-controls {
+    flex-direction: column;
+  }
+  
+  .explorer-controls input,
+  .explorer-controls select {
+    width: 100%;
+  }
+  
+  .places-grid,
+  .activities-grid,
+  .groups-grid,
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
